@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AlarmClock</string>
     <string name="textview">TextView</string>
+    <string name="but1">Continue</string>
 </resources>
