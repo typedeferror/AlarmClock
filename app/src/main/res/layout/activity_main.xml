@@ -4,28 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.alarmclock.MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context="com.example.user.alarmclock.MainActivity">
 
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="341dp" />
-
-    <Button
-        android:id="@+id/button8"
+    <ImageButton
+        android:id="@+id/imageBut1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="edit alarm"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="404dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_manage" android:contentDescription="@string/edit" />
 
-    <Button
-        android:id="@+id/button9"
+    <ImageButton
+        android:id="@+id/imageBut2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="add alarm"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="404dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_add" android:contentDescription="@string/add"/>
 
 </android.support.constraint.ConstraintLayout>
