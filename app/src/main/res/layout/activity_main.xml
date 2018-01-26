@@ -6,20 +6,21 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.alarmclock.MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageBut1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_manage" android:contentDescription="@string/edit" />
 
-    <ImageButton
-        android:id="@+id/imageBut2"
+    <Button
+        android:id="@+id/but1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add" android:contentDescription="@string/add"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/but2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        android:onClick="activity_add_alarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,15 +13,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.imageBut2:
-                Intent intent = new Intent(this, EditAlarm.class);
-                startActivity(intent);
-                break;
-            default:
-                break;
-        }
+
+    public void activity_add_alarm (View v) {
+        Intent intent = new Intent(this, AddAlarm.class);
+        startActivity(intent);
     }
 }
