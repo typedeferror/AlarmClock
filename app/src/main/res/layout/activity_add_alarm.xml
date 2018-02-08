@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +9,9 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TimePicker
-        android:id="@+id/timePicker"
+        android:id="@+id/timePicker1"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         app:layout_constraintBottom_toTopOf="@+id/cancel_alarm"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,18 +21,18 @@
         android:id="@+id/cancel_alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="119dp"
+        android:layout_marginBottom="80dp"
         android:text="@string/cancel"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/timePicker" />
+        app:layout_constraintStart_toStartOf="@+id/timePicker1" />
 
     <Button
         android:id="@+id/save_alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/save"
-        app:layout_constraintEnd_toEndOf="@+id/timePicker"
-        app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+        app:layout_constraintEnd_toEndOf="@+id/timePicker1"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
 
     <android.support.design.widget.BottomNavigationView
     android:id="@+id/bottoms_settings"

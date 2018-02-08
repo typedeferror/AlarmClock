@@ -8,5 +8,7 @@
     <string name="repeat">Repeat</string>
     <string name="label">Label</string>
     <string name="snooze">Snooze</string>
+    <string name="firstAlarm">OFF</string>
+    <string name="switch_snooze">switchSnooze</string>
 
 </resources>

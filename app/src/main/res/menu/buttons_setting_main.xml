@@ -8,13 +8,15 @@
         android:title="@string/repeat"
         app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/action_label"
+    <item
+        android:id="@+id/action_label"
         android:enabled="true"
         android:icon="@drawable/ic_name_of_alarm"
         android:title="@string/label"
         app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/action_snooze"
+    <item
+        android:id="@+id/action_snooze"
         android:enabled="true"
         android:icon="@drawable/ic_snooze"
         android:title="@string/snooze"
