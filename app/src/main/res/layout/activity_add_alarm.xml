@@ -31,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/save"
+        android:onClick="save_alarm"
         app:layout_constraintEnd_toEndOf="@+id/timePicker1"
         app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
 

@@ -6,9 +6,11 @@
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
     <string name="repeat">Repeat</string>
-    <string name="label">Label</string>
     <string name="snooze">Snooze</string>
-    <string name="firstAlarm">OFF</string>
+    <string name="first_alarm">OFF</string>
     <string name="switch_snooze">switchSnooze</string>
+    <string name="label">TextView</string>
+    <string name="switch_1">Switch</string>
+    <string name="text_view_2">text_view</string>
 
 </resources>
