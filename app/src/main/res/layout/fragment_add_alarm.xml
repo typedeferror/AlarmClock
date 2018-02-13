@@ -1,0 +1,46 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.user.alarmclock.AddAlarmFragment">
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_alarm"
+        app:layout_constraintStart_toStartOf="@+id/timePicker1"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="save_alarm"
+        android:text="@string/save_alarm"
+        app:layout_constraintEnd_toEndOf="@+id/timePicker1"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottoms_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/add_item_color_state"
+        app:itemTextColor="@drawable/add_item_color_state"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/buttons_setting_main" />
+
+</android.support.constraint.ConstraintLayout>

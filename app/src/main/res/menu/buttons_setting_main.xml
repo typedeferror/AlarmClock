@@ -6,13 +6,20 @@
         android:enabled="true"
         android:icon="@drawable/ic_repeat"
         android:title="@string/repeat"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_label"
+        android:enabled="true"
+        android:icon="@drawable/ic_name_of_alarm"
+        android:title="@string/label"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_snooze"
         android:enabled="true"
         android:icon="@drawable/ic_snooze"
         android:title="@string/snooze"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom" />
 
 </menu>

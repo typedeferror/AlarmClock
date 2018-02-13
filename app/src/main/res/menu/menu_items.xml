@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="1"
+        android:title="@string/settings_menu_items"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/add"
+        android:orderInCategory="1"
+        android:title="@string/item_add_alarm"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/edit"
+        android:orderInCategory="1"
+        android:title="@string/item_edit_alarm"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/remove"
+        android:orderInCategory="1"
+        android:title="@string/item_remove_alarm"
+        app:showAsAction="never" />
+
+</menu>

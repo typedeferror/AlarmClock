@@ -1,16 +1,27 @@
 <resources>
     <string name="app_name">AlarmClock</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="edit">Edit</string>
-    <string name="add">Add</string>
-    <string name="cancel">Cancel</string>
-    <string name="save">Save</string>
     <string name="repeat">Repeat</string>
     <string name="snooze">Snooze</string>
-    <string name="first_alarm">OFF</string>
-    <string name="switch_snooze">switchSnooze</string>
-    <string name="label">TextView</string>
-    <string name="switch_1">Switch</string>
-    <string name="text_view_2">text_view</string>
+    <string name="label">Label</string>
+    <!--<string-array name="day_of_weeks">-->
+    <!--<item>Monday</item>-->
+    <!--<item>Tuesday</item>-->
+    <!--<item>Wednesday</item>-->
+    <!--<item>Thursday</item>-->
+    <!--<item>Friday</item>-->
+    <!--<item>Saturday</item>-->
+    <!--<item>Sunday</item>-->
+    <!--</string-array>-->
+    <string name="settings_menu_items">Settings</string>
+    <string name="item_add_alarm">Add Alarm</string>
+    <string name="item_edit_alarm">Edit Alarm</string>
+    <string name="item_remove_alarm">Remove Alarm</string>
+    <string name="cancel_alarm">Cancel</string>
+    <string name="save_alarm">Save</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

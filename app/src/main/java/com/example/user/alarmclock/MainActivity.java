@@ -1,19 +1,14 @@
 package com.example.user.alarmclock;
 
-import android.content.Context;
-import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Switch;
-import android.widget.TextClock;
-import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,73 +16,82 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    public static ArrayList<String> alarms = new ArrayList<>();
+    private ListView listView1;
+    private TimePicker timePicker1;
+    private Fragment fragment;
+    private ArrayList<Alarm> alarms = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        ListView lv = findViewById(R.id.listView);
-//        generateListContent();
-//        lv.setAdapter(new MyListAdapter(this, R.layout.list_item, alarms));
 
-//        TextView t = findViewById(R.id.save_alarm);
-//        if (alarms.size() > 0)
-//            t.setText(alarms.get(0).toString());
+        Alarm weather_data[] = new Alarm[]
+                {
+                        new Alarm(10, 20, "Clock 1"),
+                        new Alarm(10, 21, "Clock 2"),
+                        new Alarm(10, 22, "Clock 3"),
+                        new Alarm(10, 23, "Clock 4"),
+                        new Alarm(10, 24, "Clock 5")
+                };
+
+        AlarmListAdapter adapter = new AlarmListAdapter(this,
+                R.layout.alarm_row, alarms);
+
+        listView1 = (ListView) findViewById(R.id.alarm_list);
+
+        listView1.setAdapter(adapter);
+
     }
 
-//    private void generateListContent() {
-//        for (int i = 0; i < 55; i++) {
-//            alarms.add("This time" + i);
-//        }
-//    }
-
-
-    public void activity_add_alarm(View v) {
-        Intent intent = new Intent(this, AddAlarm.class);
-        startActivity(intent);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
-//    private class MyListAdapter extends ArrayAdapter<String> {
-//        private int layout;
-//
-//        private MyListAdapter(@NonNull Context context, int resource, @NonNull List<String> objects) {
-//            super(context, resource, objects);
-//            layout = resource;
-//        }
-//
-//        @NonNull
-//        @Override
-//        public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-//            ViewHolder mainViewholder;
-//            if (convertView == null) {
-//                LayoutInflater inflater = LayoutInflater.from(getContext());
-//                convertView = inflater.inflate(layout, parent, false);
-//                ViewHolder viewHolder = new ViewHolder();
-//                viewHolder.time = convertView.findViewById(R.id.list_item_time);
-//                viewHolder.title = convertView.findViewById(R.id.list_item_label);
-//                viewHolder.button = convertView.findViewById(R.id.list_item_switch);
-//                convertView.setTag(viewHolder);
-//                viewHolder.button.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Toast.makeText(getContext(), "Button was clicked" + position, Toast.LENGTH_SHORT).show();
-//                    }
-//                });
-//            } else {
-//                mainViewholder = (ViewHolder) convertView.getTag();
-//                mainViewholder.title.setText(getItem(position));
-//            }
-//
-//            return convertView;
-//        }
-//    }
-//
-//    public class ViewHolder {
-//
-//        TextClock time;
-//        TextView title;
-//        Switch button;
-//    }
+    public void onAdd(MenuItem item) {
+        Toast.makeText(this, "redaktor", Toast.LENGTH_SHORT).show();
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Class fragmentClass = null;
+        switch (item.getItemId()) {
+            case R.id.add:
+                fragmentClass = AddAlarmFragment.class;
+                break;
+            case R.id.edit:
+                fragmentClass = EditAlarmFragment.class;
+                break;
+            case R.id.remove:
+                fragmentClass = RemoveAlarmFragment.class;
+                break;
+        }
+
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        FragmentManager fm = getFragmentManager();
+        fm.beginTransaction().replace(R.id.main_container, fragment).commit();
+
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    public void save_alarm(View view) {
+        timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
+        int hour = timePicker1.getCurrentHour();
+        int min = timePicker1.getCurrentMinute();
+
+        alarms.add(new Alarm(hour, min, String.format("%s:%s", hour, min)));
+
+        FragmentManager fm = getFragmentManager();
+        fm.beginTransaction().remove(fragment).commit();
+    }
 }
