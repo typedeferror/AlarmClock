@@ -1,27 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AlarmClock</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="repeat">Repeat</string>
-    <string name="snooze">Snooze</string>
     <string name="label">Label</string>
-    <!--<string-array name="day_of_weeks">-->
-    <!--<item>Monday</item>-->
-    <!--<item>Tuesday</item>-->
-    <!--<item>Wednesday</item>-->
-    <!--<item>Thursday</item>-->
-    <!--<item>Friday</item>-->
-    <!--<item>Saturday</item>-->
-    <!--<item>Sunday</item>-->
-    <!--</string-array>-->
-    <string name="settings_menu_items">Settings</string>
-    <string name="item_add_alarm">Add Alarm</string>
-    <string name="item_edit_alarm">Edit Alarm</string>
-    <string name="item_remove_alarm">Remove Alarm</string>
-    <string name="cancel_alarm">Cancel</string>
-    <string name="save_alarm">Save</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="mon">Monday</string>
+    <string name="tue">Tuesday</string>
+    <string name="wed">Wednesday</string>
+    <string name="thu">Thursday</string>
+    <string name="fri">Friday</string>
+    <string name="sat">Saturday</string>
+    <string name="sun">Sunday</string>
+    <string name="fab_quickAlarm">Add new alarm</string>
+    <string name="defTime">00:00</string>
+    <string name="TurnOff">Off</string>
+    <string name="alarmSaved">Alarm Saved</string>
+    <string name="alarmSet">Alarm set</string>
+    <string name="alarmCanceled">Alarm canceled</string>
+    <string name="ring">RING</string>
+    <string name="tvLabel">label</string>
+    <string name="dialogPositive">Yes</string>
+    <string name="dialogNegative">Cancel</string>
+    <string name="dialogMessage">Can i delete this alarm?</string>
 
 </resources>

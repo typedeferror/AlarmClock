@@ -2,6 +2,7 @@
   <dictionary name="User">
     <words>
       <w>alarmclock</w>
+      <w>iface</w>
       <w>textview</w>
       <w>viewholder</w>
     </words>

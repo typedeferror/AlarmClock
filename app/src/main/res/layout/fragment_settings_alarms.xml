@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorGrey"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="@string/defTime"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="120sp" />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_below="@+id/tvTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="111dp"
+        android:id="@+id/relativeLayout">
+
+
+        <ToggleButton
+            android:id="@+id/tgbMonday"
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/tgbThursday"
+            android:layout_toLeftOf="@+id/tgbWednesday"
+            android:layout_toStartOf="@+id/tgbWednesday"
+            android:background="@drawable/day_toggle_conversation"
+            android:singleLine="true"
+            android:textOff="@string/mon"
+            android:textOn="@string/mon"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="281dp" />
+
+        <ToggleButton
+            android:id="@+id/tgbTuesday"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tgbMonday"
+            android:layout_toLeftOf="@+id/tgbThursday"
+            android:layout_toStartOf="@+id/tgbThursday"
+            android:background="@drawable/day_toggle_conversation"
+            android:singleLine="true"
+            android:textOff="@string/tue"
+            android:textOn="@string/tue"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="321dp" />
+
+
+        <ToggleButton
+            android:id="@+id/tgbThursday"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="205dp"
+            android:background="@drawable/day_toggle_conversation"
+            android:singleLine="true"
+            android:textOff="@string/thu"
+            android:textOn="@string/thu"
+            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteY="321dp" />
+
+
+        <ToggleButton
+            android:id="@+id/tgbFriday"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/tgbThursday"
+            android:layout_toLeftOf="@+id/tgbSunday"
+            android:layout_toStartOf="@+id/tgbSunday"
+            android:background="@drawable/day_toggle_conversation"
+            android:singleLine="true"
+            android:textOff="@string/fri"
+            android:textOn="@string/fri"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="203dp" />
+
+        <ToggleButton
+            android:id="@+id/tgbSaturday"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tgbFriday"
+            android:layout_toEndOf="@+id/tgbThursday"
+            android:layout_toRightOf="@+id/tgbThursday"
+            android:background="@drawable/day_toggle_conversation"
+            android:singleLine="true"
+            android:textOff="@string/sat"
+            android:textOn="@string/sat"
+            tools:layout_editor_absoluteX="256dp"
+            tools:layout_editor_absoluteY="321dp" />
+
+        <ToggleButton
+            android:id="@+id/tgbSunday"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/tgbSaturday"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/day_toggle_conversation"
+            android:singleLine="true"
+            android:textOff="@string/sun"
+            android:textOn="@string/sun"
+            tools:layout_editor_absoluteX="303dp"
+            tools:layout_editor_absoluteY="281dp" />
+
+        <ImageButton
+            android:id="@+id/imgBtnRight"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/imgBtnLeft"
+            android:background="@color/colorTransparant"
+            android:src="@drawable/arrowright" />
+
+        <ImageButton
+            android:id="@+id/imgBtnLeft"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="9dp"
+            android:background="@color/colorTransparant"
+            android:src="@drawable/arrowleft" />
+
+        <ToggleButton
+            android:id="@+id/tgbWednesday"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/tgbThursday"
+            android:layout_toLeftOf="@+id/tgbFriday"
+            android:layout_toStartOf="@+id/tgbFriday"
+            android:background="@drawable/day_toggle_conversation"
+            android:singleLine="true"
+            android:textOff="@string/wed"
+            android:textOn="@string/wed"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="281dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/tvLabel"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:hint="@string/label"
+        android:inputType="text"
+        android:maxLength="18"
+        android:textAlignment="center" />
+
+</RelativeLayout>
