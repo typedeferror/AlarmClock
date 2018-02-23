@@ -2,6 +2,7 @@ package com.example.user.alarmclock;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -34,7 +35,6 @@ public class AlarmFragment extends android.app.Fragment {
     private ToggleButton tgbSat;
     private ToggleButton tgbSun;
     private TextView tvTime;
-    private Calendar calendar;
     private TextView tvLabel;
     private int currentHour;
     private int currentMin;
@@ -128,7 +128,7 @@ public class AlarmFragment extends android.app.Fragment {
             finalDays[i] = days.get(i);
         }
 
-        calendar = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, currentHour);
         calendar.set(Calendar.MINUTE, currentMin);
         calendar.set(Calendar.SECOND, 0);
@@ -191,8 +191,8 @@ public class AlarmFragment extends android.app.Fragment {
 
         @Override
         public void onClick(View view) {
-            useIface.showAlarmsSettings();
-
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
         }
     }
 

@@ -12,7 +12,8 @@
         android:id="@+id/alarmList"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -24,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
             android:layout_margin="20dp"
-            fab:fab_title="@string/fab_quickAlarm"
+            fab:fab_title="@string/fab_newAlarm"
             fab:srcCompat="@android:drawable/ic_lock_idle_alarm" />
 
     </android.support.design.widget.CoordinatorLayout>

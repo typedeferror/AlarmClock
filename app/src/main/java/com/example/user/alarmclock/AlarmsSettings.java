@@ -66,18 +66,18 @@ public class AlarmsSettings {
     public void activate(boolean on, int id) {
         alarmList = null;
         alarmList = gson.fromJson(sharedPreferences.getString("alarm", ""), type);
-        Alarm qa = alarmList.get(id);
-        qa.setActive(on);
-        int[] repeat = qa.getRepeat();
+        Alarm alarm = alarmList.get(id);
+        alarm.setActive(on);
+        int[] repeat = alarm.getRepeat();
 
         if (on) {
             alarmService.onHandleIntent(new Intent(context, AlarmReceiver.class)
-                    .putExtra("time", qa.getTime()).setAction("CREATE")
-                    .putExtra("repeat", repeat).putExtra("id", id).putExtra("desc", qa.getLabel()));
+                    .putExtra("time", alarm.getTime()).setAction("CREATE")
+                    .putExtra("repeat", repeat).putExtra("id", id).putExtra("label", alarm.getLabel()));
         } else {
             alarmService.onHandleIntent(new Intent(context, AlarmReceiver.class)
-                    .putExtra("time", qa.getTime()).setAction("CANCEL")
-                    .putExtra("repeat", repeat).putExtra("id", id).putExtra("desc", qa.getLabel()));
+                    .putExtra("time", alarm.getTime()).setAction("CANCEL")
+                    .putExtra("repeat", repeat).putExtra("id", id).putExtra("label", alarm.getLabel()));
         }
         String jsonAlarm = gson.toJson(alarmList);
         editor.putString("alarm", jsonAlarm).apply();

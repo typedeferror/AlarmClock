@@ -2,6 +2,7 @@ package com.example.user.alarmclock;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -34,7 +35,6 @@ public class SingActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +46,8 @@ public class SingActivity extends AppCompatActivity {
             }
         }
 
-        label = getIntent().getStringExtra("label");
-        int id = getIntent().getIntExtra("id", 100000005);
+        label = getIntent().getStringExtra("");
+        int id = getIntent().getIntExtra("id", 100000000);
         setContentView(R.layout.activity_sing);
         initComponents(id);
     }
@@ -63,9 +63,9 @@ public class SingActivity extends AppCompatActivity {
 
     @SuppressLint("CommitPrefEdits")
     private void initComponents(int id) {
-        TextView alarmText = findViewById(R.id.AlarmText);
-        Button tempOff = findViewById(R.id.tempOff);
+        TextView alarmText = findViewById(R.id.tvLabel);
         alarmText.setText(label);
+        Button tempOff = findViewById(R.id.tempOff);
         PlayRingtone();
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         if (vibrator != null) {
@@ -84,7 +84,8 @@ public class SingActivity extends AppCompatActivity {
         public void onClick(View view) {
             vibrator.cancel();
             mediaPlayer.stop();
-            System.exit(0);
+            Intent intent = new Intent(getBaseContext(), MainActivity.class);
+            startActivity(intent);
         }
     }
 

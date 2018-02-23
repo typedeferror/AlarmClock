@@ -6,6 +6,18 @@
     android:background="@color/colorBlack"
     tools:context=".SingActivity">
 
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="@string/label"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
 
     <Button
         android:id="@+id/tempOff"
@@ -17,17 +29,5 @@
         android:background="#8370c9"
         android:text="@string/TurnOff"
         android:textColor="#fffff0" />
-
-    <TextView
-        android:id="@+id/AlarmText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
-        android:text="@string/ring"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ffffff"
-        android:textSize="30sp" />
 
 </RelativeLayout>

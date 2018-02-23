@@ -32,7 +32,6 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MainActivity extends AppCompatActivity {
 
     private Fragment currentAlarmFragment;
-    private Fragment currentHelperAlarmFragment;
     private FragmentManager fragmentManager;
     private AlarmsSettings alarmsSettings;
     private ListView alarmList;
@@ -135,11 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBackPressed() {
 
-        if (currentHelperAlarmFragment != null) {
-            removeFragment(currentHelperAlarmFragment);
-            currentHelperAlarmFragment = null;
-
-        } else if (currentAlarmFragment != null) {
+        if (currentAlarmFragment != null) {
             removeFragment(currentAlarmFragment);
             currentAlarmFragment = null;
         } else {
@@ -154,16 +149,6 @@ public class MainActivity extends AppCompatActivity {
         ((AlarmFragment) currentAlarmFragment).setAlarmId(id);
         ((AlarmFragment) currentAlarmFragment).setAddNewAlarm(addNewAlarm);
         changeFragment(currentAlarmFragment);
-    }
-
-    private void startHelperAlarmFragment() {
-        currentHelperAlarmFragment = new HelperAlarmFragment();
-        ((HelperAlarmFragment) currentHelperAlarmFragment).setCallBack(new AlarmHelperListener());
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.add(android.R.id.content, currentHelperAlarmFragment).commit();
-        fragmentManager = getFragmentManager();
-
-
     }
 
 
@@ -196,14 +181,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private class AlarmHelperListener implements ClosingIface {
-
-        @Override
-        public void closeFragment() {
-            removeFragment(currentHelperAlarmFragment);
-        }
-    }
-
     private class AlarmListener implements AddAlarmIface {
         @Override
         public void addNewAlarm(Alarm alarm, int id, boolean addNewAlarm) {
@@ -221,10 +198,6 @@ public class MainActivity extends AppCompatActivity {
             removeFragment(currentAlarmFragment);
         }
 
-        @Override
-        public void showAlarmsSettings() {
-            startHelperAlarmFragment();
-        }
     }
 
 

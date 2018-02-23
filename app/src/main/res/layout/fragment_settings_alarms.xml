@@ -117,27 +117,6 @@
             tools:layout_editor_absoluteX="303dp"
             tools:layout_editor_absoluteY="281dp" />
 
-        <ImageButton
-            android:id="@+id/imgBtnRight"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/imgBtnLeft"
-            android:background="@color/colorTransparant"
-            android:src="@drawable/arrowright" />
-
-        <ImageButton
-            android:id="@+id/imgBtnLeft"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="9dp"
-            android:background="@color/colorTransparant"
-            android:src="@drawable/arrowleft" />
-
         <ToggleButton
             android:id="@+id/tgbWednesday"
             android:layout_width="100dp"
@@ -151,11 +130,12 @@
             android:textOn="@string/wed"
             tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="281dp" />
+
     </RelativeLayout>
 
     <EditText
         android:id="@+id/tvLabel"
-        android:layout_width="250dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -164,5 +144,25 @@
         android:inputType="text"
         android:maxLength="18"
         android:textAlignment="center" />
+
+    <ImageButton
+        android:id="@+id/imgBtnRight"
+        android:layout_width="75dp"
+        android:layout_height="115dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorTransparant"
+        android:src="@drawable/arrowright" />
+
+    <ImageButton
+        android:id="@+id/imgBtnLeft"
+        android:layout_width="75dp"
+        android:layout_height="115dp"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorTransparant"
+        android:src="@drawable/arrowleft" />
 
 </RelativeLayout>

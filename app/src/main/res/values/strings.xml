@@ -10,16 +10,15 @@
     <string name="fri">Friday</string>
     <string name="sat">Saturday</string>
     <string name="sun">Sunday</string>
-    <string name="fab_quickAlarm">Add new alarm</string>
+    <string name="fab_newAlarm">Add new alarm</string>
     <string name="defTime">00:00</string>
     <string name="TurnOff">Off</string>
     <string name="alarmSaved">Alarm Saved</string>
     <string name="alarmSet">Alarm set</string>
     <string name="alarmCanceled">Alarm canceled</string>
-    <string name="ring">RING</string>
     <string name="tvLabel">label</string>
     <string name="dialogPositive">Yes</string>
     <string name="dialogNegative">Cancel</string>
-    <string name="dialogMessage">Can i delete this alarm?</string>
+    <string name="dialogMessage">Do i delete this alarm?</string>
 
 </resources>

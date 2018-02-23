@@ -8,5 +8,4 @@ public interface AddAlarmIface {
 
     Alarm getChooseAlarmsSettings(int id);
     void closeFragment();
-    void showAlarmsSettings();
 }
